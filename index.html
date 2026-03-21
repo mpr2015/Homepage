@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+<title>Dashboard</title>
+
+<!-- PWA Meta -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Dashboard">
+
+<!-- Icon (replace later if you want) -->
+<link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1828/1828884.png">
+
+<style>
+:root {
+    --bg: #0f1115;
+    --card: #1a1d24;
+    --text: #e6e6e6;
+    --sub: #9aa4b2;
+    --accent: #4f8cff;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* Safe area for iPhone notch */
+.container {
+    padding: 20px;
+    padding-top: calc(20px + env(safe-area-inset-top));
+    padding-bottom: calc(20px + env(safe-area-inset-bottom));
+}
+
+/* Header */
+.header {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subheader {
+    color: var(--sub);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+/* Sections */
+.section {
+    margin-bottom: 25px;
+}
+
+.section-title {
+    font-size: 13px;
+    color: var(--sub);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+/* Cards */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+}
+
+.card {
+    background: var(--card);
+    border-radius: 14px;
+    padding: 16px;
+    text-decoration: none;
+    color: var(--text);
+    transition: transform 0.1s ease, background 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 70px;
+}
+
+/* Tap feedback */
+.card:active {
+    transform: scale(0.96);
+    background: #2a2f3a;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    font-size: 12px;
+    color: #666;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="header">Dashboard</div>
+<div class="subheader">30 min daily flow</div>
+
+<!-- Quick -->
+<div class="section">
+<div class="section-title">Start</div>
+<div class="grid">
+<a class="card" href="https://www.morningbrew.com" target="_blank">
+<div class="card-title">Morning Brew</div>
+</a>
+<a class="card" href="https://www.axios.com" target="_blank">
+<div class="card-title">Axios</div>
+</a>
+<a class="card" href="https://www.semafor.com" target="_blank">
+<div class="card-title">Semafor</div>
+</a>
+</div>
+</div>
+
+<!-- Interesting -->
+<div class="section">
+<div class="section-title">Explore</div>
+<div class="grid">
+<a class="card" href="https://www.atlasobscura.com" target="_blank">
+<div class="card-title">Atlas Obscura</div>
+</a>
+<a class="card" href="https://www.sciencealert.com" target="_blank">
+<div class="card-title">ScienceAlert</div>
+</a>
+</div>
+</div>
+
+<!-- Reddit -->
+<div class="section">
+<div class="section-title">Reddit</div>
+<div class="grid">
+<a class="card" href="https://www.reddit.com/r/worldnews/top/?t=day" target="_blank">
+<div class="card-title">World News</div>
+</a>
+<a class="card" href="https://www.reddit.com/r/todayilearned/top/?t=day" target="_blank">
+<div class="card-title">TIL</div>
+</a>
+<a class="card" href="https://www.reddit.com/r/AskHistorians/top/?t=week" target="_blank">
+<div class="card-title">History</div>
+</a>
+<a class="card" href="https://www.reddit.com/r/DepthHub/top/?t=week" target="_blank">
+<div class="card-title">Deep</div>
+</a>
+</div>
+</div>
+
+<!-- Scroll -->
+<div class="section">
+<div class="section-title">Limit 5 min</div>
+<div class="grid">
+<a class="card" href="https://www.reddit.com" target="_blank">
+<div class="card-title">Reddit</div>
+</a>
+<a class="card" href="https://wikitok.vercel.app" target="_blank">
+<div class="card-title">WikiTok</div>
+</a>
+</div>
+</div>
+
+<div class="footer">
+Stay focused.
+</div>
+
+</div>
+
+</body>
+</html>
