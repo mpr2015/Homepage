@@ -71,7 +71,7 @@ body {
 
 
 
-/* Header */
+/* HEADER */
 
 
 .header {
@@ -97,7 +97,7 @@ body {
 
 
 
-/* Weather */
+/* WEATHER */
 
 
 .weather-panel {
@@ -116,7 +116,7 @@ body {
 
     align-items:center;
 
-    margin-bottom:25px;
+    margin-bottom:15px;
 
 }
 
@@ -199,7 +199,112 @@ body {
 
 
 
-/* Daily Flow */
+/* FORECAST */
+
+
+.forecast-panel {
+
+    background:var(--panel);
+
+    border:1px solid var(--border);
+
+    border-radius:18px;
+
+    padding:18px;
+
+    margin-bottom:30px;
+
+}
+
+
+.forecast-title {
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+}
+
+
+.forecast-grid {
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:12px;
+
+}
+
+
+.forecast-day {
+
+    background:var(--panel2);
+
+    border-radius:12px;
+
+    padding:14px;
+
+    text-align:center;
+
+}
+
+
+.forecast-name {
+
+    color:var(--muted);
+
+    font-size:12px;
+
+}
+
+
+.forecast-icon {
+
+    font-size:30px;
+
+    margin:8px;
+
+}
+
+
+.forecast-temp {
+
+    font-weight:600;
+
+}
+
+
+.rain-small {
+
+    color:var(--muted);
+
+    font-size:12px;
+
+    margin-top:5px;
+
+}
+
+
+
+@media(max-width:500px){
+
+    .forecast-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+
+/* DAILY FLOW */
 
 
 .flow {
@@ -236,8 +341,6 @@ body {
 
     margin-top:12px;
 
-    overflow:hidden;
-
 }
 
 
@@ -253,7 +356,7 @@ body {
 
 
 
-/* Sections */
+/* SECTIONS */
 
 
 .section {
@@ -277,7 +380,7 @@ body {
 
 
 
-/* Cards */
+/* CARDS */
 
 
 .grid {
@@ -285,7 +388,7 @@ body {
     display:grid;
 
     grid-template-columns:
-        repeat(auto-fit,minmax(220px,1fr));
+    repeat(auto-fit,minmax(220px,1fr));
 
     gap:14px;
 
@@ -341,7 +444,7 @@ body {
 
 
 
-/* Footer */
+/* FOOTER */
 
 
 .footer {
@@ -360,7 +463,6 @@ body {
 </style>
 
 </head>
-
 
 
 <body>
@@ -382,7 +484,6 @@ MISSION CONTROL
 
 <!-- WEATHER -->
 
-
 <div class="weather-panel">
 
 
@@ -402,12 +503,12 @@ SPRINGFIELD, VA
 Loading weather...
 </div>
 
-
 </div>
 
 
 
 <div class="weather-details">
+
 
 <div>
 <span>HIGH</span>
@@ -436,407 +537,86 @@ Loading weather...
 
 
 
-<!-- FLOW -->
+<!-- THREE DAY FORECAST -->
 
 
-<div class="flow">
+<div class="forecast-panel">
 
-<div class="flow-title">
-TODAY'S FLOW
+
+<div class="forecast-title">
+3 DAY OUTLOOK
 </div>
 
 
-<div class="progress">
+<div class="forecast-grid">
 
-<div class="progress-bar"></div>
 
+<div class="forecast-day">
+
+<div class="forecast-name" id="day1">
+TODAY
 </div>
 
+<div class="forecast-icon" id="icon1">
+☁️
 </div>
 
-
-
-
-
-<!-- NEWS -->
-
-
-<div class="section">
-
-<div class="section-title">
-📰 BRIEFING
+<div class="forecast-temp" id="temp1">
+--° / --°
 </div>
 
-
-<div class="grid">
-
-
-<a class="card" href="https://www.morningbrew.com" target="_blank">
-
-<div class="card-title">
-Morning Brew
-</div>
-
-<div class="card-desc">
-Daily business and news briefing
-</div>
-
-</a>
-
-
-
-<a class="card" href="https://join1440.com/newsletter/" target="_blank">
-
-<div class="card-title">
-1440
-</div>
-
-<div class="card-desc">
-Balanced daily overview
-</div>
-
-</a>
-
-
-
-<a class="card" href="https://www.semafor.com" target="_blank">
-
-<div class="card-title">
-Semafor
-</div>
-
-<div class="card-desc">
-Global news coverage
-</div>
-
-</a>
-
-
+<div class="rain-small" id="rain1">
+--%
 </div>
 
 </div>
 
 
 
+<div class="forecast-day">
 
-
-<!-- LEARN -->
-
-
-<div class="section">
-
-<div class="section-title">
-🔬 LEARN
+<div class="forecast-name" id="day2">
+TOMORROW
 </div>
 
-
-<div class="grid">
-
-
-<a class="card" href="https://www.sciencealert.com" target="_blank">
-
-<div class="card-title">
-ScienceAlert
+<div class="forecast-icon" id="icon2">
+☁️
 </div>
 
-<div class="card-desc">
-Science discoveries
+<div class="forecast-temp" id="temp2">
+--° / --°
 </div>
 
-</a>
-
-
-<a class="card" href="https://nautil.us/" target="_blank">
-
-<div class="card-title">
-Nautilus
-</div>
-
-<div class="card-desc">
-Science and ideas
-</div>
-
-</a>
-
-
+<div class="rain-small" id="rain2">
+--%
 </div>
 
 </div>
 
 
 
+<div class="forecast-day">
 
-
-<!-- SPORTS -->
-
-
-<div class="section">
-
-<div class="section-title">
-⚾ SPORTS
+<div class="forecast-name" id="day3">
+DAY 3
 </div>
 
-
-<div class="grid">
-
-
-<a class="card" href="https://www.espn.com/mlb/" target="_blank">
-
-<div class="card-title">
-Baseball
+<div class="forecast-icon" id="icon3">
+☁️
 </div>
 
-<div class="card-desc">
-MLB scores and news
+<div class="forecast-temp" id="temp3">
+--° / --°
 </div>
 
-</a>
-
-
-<a class="card" href="https://www.truebluela.com/" target="_blank">
-
-<div class="card-title">
-True Blue LA
-</div>
-
-<div class="card-desc">
-Dodgers coverage
-</div>
-
-</a>
-
-
+<div class="rain-small" id="rain3">
+--%
 </div>
 
 </div>
 
 
-
-
-
-<!-- COMMUNITIES -->
-
-
-<div class="section">
-
-<div class="section-title">
-🌎 COMMUNITIES
 </div>
 
 
-<div class="grid">
-
-
-<a class="card" href="https://www.reddit.com/r/worldnews/top/?t=day" target="_blank">
-
-<div class="card-title">
-World News
 </div>
-
-<div class="card-desc">
-Global events
-</div>
-
-</a>
-
-
-<a class="card" href="https://www.reddit.com/r/todayilearned/top/?t=day" target="_blank">
-
-<div class="card-title">
-Today I Learned
-</div>
-
-<div class="card-desc">
-Interesting facts
-</div>
-
-</a>
-
-
-<a class="card" href="https://www.reddit.com/r/baseball/new/" target="_blank">
-
-<div class="card-title">
-Baseball Community
-</div>
-
-<div class="card-desc">
-Discussion and analysis
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<!-- UNWIND -->
-
-
-<div class="section">
-
-<div class="section-title">
-😂 UNWIND
-</div>
-
-
-<div class="grid">
-
-
-<a class="card" href="https://thehardtimes.net/" target="_blank">
-
-<div class="card-title">
-Hard Times
-</div>
-
-<div class="card-desc">
-Satirical news
-</div>
-
-</a>
-
-
-<a class="card" href="https://www.cracked.com/" target="_blank">
-
-<div class="card-title">
-Cracked
-</div>
-
-<div class="card-desc">
-Comedy articles
-</div>
-
-</a>
-
-
-<a class="card" href="https://dadjokes.org/" target="_blank">
-
-<div class="card-title">
-Dad Jokes
-</div>
-
-<div class="card-desc">
-Quick humor
-</div>
-
-</a>
-
-
-</div>
-
-</div>
-
-
-
-
-
-<div class="footer">
-
-MISSION STATUS: ONLINE
-
-</div>
-
-
-
-</div>
-
-
-
-
-
-<script>
-
-
-function updateDate(){
-
-const now = new Date();
-
-document.getElementById("date").innerHTML =
-now.toLocaleDateString(
-"en-US",
-{
-weekday:"long",
-month:"long",
-day:"numeric"
-}
-);
-
-}
-
-
-
-async function loadWeather(){
-
-
-try {
-
-
-const response =
-await fetch(
-"https://wttr.in/22153?format=j1"
-);
-
-
-const data =
-await response.json();
-
-
-const current =
-data.current_condition[0];
-
-
-const today =
-data.weather[0];
-
-
-
-document.getElementById("temperature").innerHTML =
-current.temp_F;
-
-
-document.getElementById("condition").innerHTML =
-current.weatherDesc[0].value;
-
-
-
-document.getElementById("high").innerHTML =
-today.maxtempF+"°";
-
-
-document.getElementById("low").innerHTML =
-today.mintempF+"°";
-
-
-document.getElementById("rain").innerHTML =
-today.hourly[0].chanceofrain+"%";
-
-
-}
-
-catch(error){
-
-document.getElementById("condition").innerHTML =
-"Weather unavailable";
-
-}
-
-
-}
-
-
-
-updateDate();
-
-loadWeather();
-
-
-</script>
-
-
-</body>
-
-</html>
