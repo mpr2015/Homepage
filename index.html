@@ -73,7 +73,6 @@ body {
 
 /* HEADER */
 
-
 .header {
 
     font-size:34px;
@@ -98,7 +97,6 @@ body {
 
 
 /* WEATHER */
-
 
 .weather-panel {
 
@@ -168,9 +166,9 @@ body {
 
     display:block;
 
-    font-size:11px;
-
     color:var(--muted);
+
+    font-size:11px;
 
 }
 
@@ -185,7 +183,7 @@ body {
 
 @media(max-width:600px){
 
-    .weather-panel{
+    .weather-panel {
 
         flex-direction:column;
 
@@ -294,7 +292,7 @@ body {
 
 @media(max-width:500px){
 
-    .forecast-grid{
+    .forecast-grid {
 
         grid-template-columns:1fr;
 
@@ -305,7 +303,6 @@ body {
 
 
 /* DAILY FLOW */
-
 
 .flow {
 
@@ -341,6 +338,8 @@ body {
 
     margin-top:12px;
 
+    overflow:hidden;
+
 }
 
 
@@ -357,7 +356,6 @@ body {
 
 
 /* SECTIONS */
-
 
 .section {
 
@@ -381,7 +379,6 @@ body {
 
 
 /* CARDS */
-
 
 .grid {
 
@@ -446,7 +443,6 @@ body {
 
 /* FOOTER */
 
-
 .footer {
 
     text-align:center;
@@ -482,7 +478,7 @@ MISSION CONTROL
 
 
 
-<!-- WEATHER -->
+<!-- WEATHER PANEL -->
 
 <div class="weather-panel">
 
@@ -502,6 +498,7 @@ SPRINGFIELD, VA
 <div class="condition" id="condition">
 Loading weather...
 </div>
+
 
 </div>
 
@@ -532,8 +529,6 @@ Loading weather...
 
 
 </div>
-
-
 
 
 
@@ -572,7 +567,6 @@ TODAY
 </div>
 
 
-
 <div class="forecast-day">
 
 <div class="forecast-name" id="day2">
@@ -592,7 +586,6 @@ TOMORROW
 </div>
 
 </div>
-
 
 
 <div class="forecast-day">
@@ -618,5 +611,523 @@ DAY 3
 
 </div>
 
+
+</div>
+
+
+
+<!-- DAILY FLOW -->
+
+
+<div class="flow">
+
+<div class="flow-title">
+TODAY'S FLOW
+</div>
+
+
+<div class="progress">
+
+<div class="progress-bar"></div>
+
+</div>
+<!-- BRIEFING -->
+
+<div class="section">
+
+<div class="section-title">
+📰 BRIEFING
+</div>
+
+
+<div class="grid">
+
+
+<a class="card" href="https://www.morningbrew.com" target="_blank">
+
+<div class="card-title">
+Morning Brew
+</div>
+
+<div class="card-desc">
+Daily business and news briefing
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://join1440.com/newsletter/" target="_blank">
+
+<div class="card-title">
+1440
+</div>
+
+<div class="card-desc">
+Balanced daily overview
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.semafor.com" target="_blank">
+
+<div class="card-title">
+Semafor
+</div>
+
+<div class="card-desc">
+Global news coverage
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- LEARNING -->
+
+
+<div class="section">
+
+<div class="section-title">
+🔬 LEARNING
+</div>
+
+
+<div class="grid">
+
+
+<a class="card" href="https://www.sciencealert.com" target="_blank">
+
+<div class="card-title">
+ScienceAlert
+</div>
+
+<div class="card-desc">
+Science discoveries and research
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://nautil.us/" target="_blank">
+
+<div class="card-title">
+Nautilus
+</div>
+
+<div class="card-desc">
+Science, ideas, and exploration
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- SPORTS -->
+
+
+<div class="section">
+
+<div class="section-title">
+⚾ SPORTS
+</div>
+
+
+<div class="grid">
+
+
+<a class="card" href="https://www.espn.com/mlb/" target="_blank">
+
+<div class="card-title">
+MLB
+</div>
+
+<div class="card-desc">
+Scores and league news
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.truebluela.com/" target="_blank">
+
+<div class="card-title">
+True Blue LA
+</div>
+
+<div class="card-desc">
+Dodgers analysis
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- COMMUNITIES -->
+
+
+<div class="section">
+
+<div class="section-title">
+🌎 COMMUNITIES
+</div>
+
+
+<div class="grid">
+
+
+<a class="card" href="https://www.reddit.com/r/worldnews/top/?t=day" target="_blank">
+
+<div class="card-title">
+World News
+</div>
+
+<div class="card-desc">
+Global events discussion
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.reddit.com/r/todayilearned/top/?t=day" target="_blank">
+
+<div class="card-title">
+Today I Learned
+</div>
+
+<div class="card-desc">
+Interesting facts
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.reddit.com/r/baseball/new/" target="_blank">
+
+<div class="card-title">
+Baseball
+</div>
+
+<div class="card-desc">
+Community discussion
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.reddit.com/r/NatureIsMetal/top/?t=week" target="_blank">
+
+<div class="card-title">
+Nature
+</div>
+
+<div class="card-desc">
+Wildlife and nature
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<!-- ENTERTAINMENT -->
+
+
+<div class="section">
+
+<div class="section-title">
+😂 UNWIND
+</div>
+
+
+<div class="grid">
+
+
+<a class="card" href="https://thehardtimes.net/" target="_blank">
+
+<div class="card-title">
+The Hard Times
+</div>
+
+<div class="card-desc">
+Satirical headlines
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://www.cracked.com/" target="_blank">
+
+<div class="card-title">
+Cracked
+</div>
+
+<div class="card-desc">
+Comedy articles
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://dadjokes.org/" target="_blank">
+
+<div class="card-title">
+Dad Jokes
+</div>
+
+<div class="card-desc">
+Quick humor
+</div>
+
+</a>
+
+
+
+<a class="card" href="https://wikitok.vercel.app" target="_blank">
+
+<div class="card-title">
+WikiTok
+</div>
+
+<div class="card-desc">
+Random learning
+</div>
+
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="footer">
+
+MISSION STATUS: ONLINE
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+/* DATE */
+
+function updateDate(){
+
+    const now = new Date();
+
+    document.getElementById("date").innerHTML =
+    now.toLocaleDateString(
+        "en-US",
+        {
+            weekday:"long",
+            month:"long",
+            day:"numeric"
+        }
+    );
+
+}
+
+
+
+/* WEATHER */
+
+async function loadWeather(){
+
+try {
+
+
+const response =
+await fetch(
+"https://wttr.in/22153?format=j1"
+);
+
+
+const data =
+await response.json();
+
+
+
+const current =
+data.current_condition[0];
+
+
+const today =
+data.weather[0];
+
+
+
+document.getElementById("temperature").innerHTML =
+current.temp_F;
+
+
+
+document.getElementById("condition").innerHTML =
+current.weatherDesc[0].value;
+
+
+
+document.getElementById("high").innerHTML =
+today.maxtempF + "°";
+
+
+
+document.getElementById("low").innerHTML =
+today.mintempF + "°";
+
+
+
+document.getElementById("rain").innerHTML =
+today.hourly[0].chanceofrain + "%";
+
+
+
+
+
+for(let i = 0; i < 3; i++){
+
+
+let day =
+data.weather[i];
+
+
+let date =
+new Date(day.date);
+
+
+
+document.getElementById(
+"day"+(i+1)
+).innerHTML =
+date.toLocaleDateString(
+"en-US",
+{
+weekday:"short"
+}
+);
+
+
+
+document.getElementById(
+"temp"+(i+1)
+).innerHTML =
+day.maxtempF + "° / " + day.mintempF + "°";
+
+
+
+document.getElementById(
+"rain"+(i+1)
+).innerHTML =
+day.hourly[0].chanceofrain + "%";
+
+
+
+let description =
+day.hourly[4]
+.weatherDesc[0]
+.value
+.toLowerCase();
+
+
+
+let icon = "☁️";
+
+
+if(description.includes("sun")){
+    icon="☀️";
+}
+
+else if(description.includes("rain")){
+    icon="🌧️";
+}
+
+else if(description.includes("cloud")){
+    icon="🌤️";
+}
+
+
+
+document.getElementById(
+"icon"+(i+1)
+).innerHTML =
+icon;
+
+
+}
+
+
+
+}
+
+catch(error){
+
+document.getElementById("condition").innerHTML =
+"Weather unavailable";
+
+}
+
+
+}
+
+
+
+updateDate();
+
+loadWeather();
+
+
+</script>
+
+
+</body>
+
+</html>
 
 </div>
